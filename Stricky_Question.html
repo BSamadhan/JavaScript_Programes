@@ -1,0 +1,460 @@
+<DOCTYPE html>
+<html>
+<body>
+
+<h2> Stricky Questions with Explanation In JavaScript</h2>
+<script>
+    // Example 1 with explain = We are compare two array console print "false" value. becouse array memory location is not same 
+    // let a = [];
+    // let b = [];
+    // console.log(a==b) // Console will be print false
+    // console.log(a===b) // Console will be print false
+</script>
+<script>
+    //Example 2 with explain = We are compare two array console print will be "true" value. becouse array memory location is same
+    // let a = [];
+    // let b = a;
+    // console.log(a==b) // Console will be print true
+    // console.log(a===b) // Console will be print true
+</script>
+<script>
+    //Example 3 with explain = We are compare two array console print will be "true" value. there is compare to array value not memory location both array value is same 
+    // let a = [20];
+    // let b = [20];
+    // console.log(a[0]==b[0]) // Console will be print true
+    // console.log(a[0]===b[0]) // Console will be print true
+</script>
+<script>
+    //Example 4 with explain = We are using spread operator. Spread operator expand the colleted array element in single element.
+    // let z = [1,2,3,4];
+    // let a = {name:"Sam"};
+    // console.log(...z) // will be print 1234
+</script>
+<script>
+    //Example 5 with explain = JavaScript considered a special value of the number type 
+    // console.log(typeof NaN);
+</script>
+<script>
+    //Example 6 with explain = both are object data type and both string value
+    //console.log(typeof [] === 'object');// will be print true
+</script>
+<script>
+    //Example 7 with explain = minus minus become pluse then console print 20
+    // let data = 10 - - 10;
+    // console.log(data) // will be print 20
+</script>
+<script>
+    //Example 8 with explain = Set method return new Array
+    // let set = new Set([1,2,2,3,4]);
+    // let newset = [...set]
+    // console.log(newset);// Console will be print [1,2,3,4]
+</script>
+<script>
+    //Example 9 with explain = 
+    let data = {name: "Anil"};
+    console.log(delete data.name); // Console will be print "true"
+    console.log(data)// Console will be print empty {}- object
+</script>
+<script>
+    //Example 10 with explain = You can not be delete direct object throgth delete 
+    // let data = {name: "Anil"};
+    // console.log(delete data) // Console will be print "false"
+</script>
+<script>
+    //Example 11 with explain = Destructuring array "data", assigning the first element to "a"
+    // let data = ["Sam","Pammu","Sammu"];
+    // let [a] = data;
+    // console.log(a);// Console will be print "Sam"
+</script>
+<script>
+    //Example 12 with explain = You can use ',' for getting second element
+    // let data = ["Sam","Pammu","Sammu"];
+    // let [,a] = data; // How to get second element
+    // console.log(a); // Console will be print "Pammu"
+</script>
+<script>
+    //Example 13 with explain = Destructuring object "data" return property value
+    // const data = {name:"Amit",age: 37,skill: 'JS'}
+    // const {name} = data; // Object destructuring
+    // console.log(name) // Console will be print Amit
+</script>
+<script>
+    //Example 14 with explain = You can use spread operator for marge two object
+    // let data = {name:"Amit",age: 37,skill: 'JS'};
+    // let info = {city:"pune",mail:"sbehere@gmail.com"}
+
+    // const all = {...data,...info};// 
+    // console.log(all)
+</script>
+<script>
+    //Example 15 with explain = 
+    // let data = {name:"Amit",age: 37,skill: 'JS'};
+    // let info = {city:"pune"}
+
+    // const all = {data,...info};
+    // console.log(all) // will be print create new object in object like - {{name:"Amit",age: 37,skill: 'JS'},city:"pune"}
+</script>
+<script>
+    //Example 16 with explain = In the merged object, the skill property's value is taken from the info object, and therefore it's "React". The rest of the properties are combined from both objects.
+    // let data = {name:"Amit",age: 37,skill: 'JS'};
+    // let info = {city:"pune",skill:"React"}
+
+    // const all = {...data,...info};
+    // console.log(all)
+</script>
+<script>
+    //Example 17 with explain = if We are using or || operator or operator taken first positive value
+    // let result = false || 20 || {} || null;
+    // console.log(result); // Console will be print 20
+</script>
+<script>
+    //Example 18 with explain = if We are using or || operator or operator taken first positive value
+    // let result = false || null || '' ;
+    // console.log(result); // Console will be print empty string
+</script>
+<script>
+    //Example 19 with explain = if we are using or || operator or operator taken first positive value
+    // let result = [] || 0 || true ;
+    // console.log(result); // Console will be print empty []
+</script>
+<script>
+    //Example 20 with explain = 
+    // let result = [] && {} && true ;
+    // console.log(result); // Console will be print 'true';
+</script>
+<script>
+     //Example 21 with explain = Creante new promise that promise immediatly resolves and promise has been fulfilled with value "5"
+    // console.log(Promise.resolve(5))// Console will be print fulfiled 5
+</script>
+<script>
+     //Example 22 with explain = let is block scope variable then considering first. ReferenceError: Cannot access 'name' before initialization
+     let name = "Sam";
+     function getName(){
+        console.log(name); //ReferenceError: Cannot access 'name' before initialization
+        let name= "Anil"
+     }
+     getName();
+</script>
+<script>
+     //Example 23 with explain = Cannot access 'name' before initialization
+     var name = "Sam";
+     function getName(){
+        console.log(name); 
+        var name = "Anil"
+     }
+     getName();
+</script>
+<script>
+     //Example 24 with explain = Cannot access 'name' before initialization
+     // let name = "Sam";
+     // function getName(){
+     //    console.log(name); // Console will be print 'undefined'
+     //    var name= "Anil"
+     // }
+     // getName();
+</script>
+<script>
+     //Example 25 with explain = //ReferenceError: Cannot access 'name' before initialization
+     // var name = "Sam";
+     // function getName(){
+     //    console.log(name); // //ReferenceError: Cannot access 'name' before initialization
+     //    let name= "Anil"
+     // }
+     // getName();
+</script>
+<script>
+     //Example 26 with explain = You can not access same variable name
+     // let name = "Sam";
+     // var name = "Dip";
+     // function getName(){
+     //    console.log(name); // Console wil be print Syntax error: Identifier 'name' has already been declared
+     // }
+     // getName();
+</script>
+<script>
+     //Example 27 with explain = We use arrow function & arrow function return true value.
+     //console.log(`${(x=> x)('I like')} to react`) // Console will be print 'I like to react'
+</script>
+<script>
+     //Example 28 with explain = 
+     // We want to arrow destructuring and output should be 6 
+     // function sumValues(a,b,c){
+     //    return a + b + c;
+     // }
+     //console.log(sumValues(...[1,2,3])); // Console will be print '6'
+     //console.log(sumValues([...1,2,3])) // Console will be print 'Typeerror: 1 is no iterable'
+     //console.log(sumValues([...[1,2,3]])) // Console will be print '1,2,3undefinedundefined'
+     //console.log(sumValues([1,2,3])) // Console will be print '1,2,3undefinedundefined'
+     
+</script>
+<script>
+     //Example 29 with explain = !Not operator perform apposite side means value is true !not opetor return false value and value false then return true value.
+     // let name = "This a js code"
+     // console.log(!typeof name === 'object'); // Console will be print 'false'
+     // console.log(!typeof name === 'string'); // Console will be print 'false'
+</script>
+<script>
+     //Example 30 with explain = isNaN is check not a number value 
+    // const name = "JavaScript";
+    // const age = 33;
+    // console.log(isNaN(name)) // Console will be print 'true'
+    // console.log(isNaN(age)) // Console will be print 'false'
+</script>
+<script>
+     //Example 30 with explain = if you use 'seal method' you can not be modify your object and no any property add only modify existing object property.
+     // const person ={name:"Samadhan"};
+     // // How can modify person object
+     // Object.seal(person);
+     // person.name= "Pundlik"
+     // console.log(person) // Console will be print 'Pundlik'
+</script>
+<script>
+     //Example 30 with explain = You can use 'shift' method for remove first element in array
+    // let data = [1,2,5,6,8];
+    // // How to remove first element
+    // data.shift()
+    // console.log(data)// Console will be print '[2,5,6,8]'
+</script>
+<script>
+     //Example 30 with explain = You can use 'pop' method for remove first element in array
+    // let data = [1,2,5,6,8];
+    // // How to remove last element
+    // data.pop()
+    // console.log(data)// Console will be print '[1,2,5,6]'
+</script>
+<script>
+     //Example 30 with explain =
+     // Check any value is odd or event
+      // let a = 2;
+      // console.log(a%2); // Console will be print 'odd' number
+</script>
+<script>
+     //Example 30 with explain = if you want string value convert to boolean type, you can use !Not operator convert string value in boolean
+     // how to convert string value in boolean
+     // let data = "React"
+     // console.log(typeof !data) // Console will be print 'boolean'
+    
+</script>
+<script>
+     //Example 31 with explain = if remove the element in array then show the empty space.
+    // let data = ["Amit","Anil","Prem"];
+    // delete data[0];
+    // console.log(data) // Console will be print 'empty space'
+</script>
+
+<script>
+     //Example 32 with explain = if remove the element in array but length will be showing 3.
+    // let data = ["Amit","Anil","Prem"];
+    // delete data[0];
+    // console.log(data.length) // Console will be print '3'
+</script>
+<script>
+     //Example 33 with explain = using array 'cancat' method and using destructuring
+     // How to marge two array - Level - 1
+        // let a = [1,2,3,4];
+        // let b = [101, 2, 1, 10];
+        // let c = a.concat(b);
+        // let d = c.filter((item,el)=> c.indexOf(item) ==el);
+        // console.log(d);
+     // How to marge two array - Level - 2
+        // let a = [1,2,3,4];
+        // let b = [5,6,7,8];
+        // let c = [...a,...b];
+        // console.log(c)
+</script>
+<script>
+     //Example 34 with explain = use 1 * return 3 x 3 = '9' and use ** then return 9 x 3 = '27' 
+     // let a = 3 ** 3
+     // console.log(a) // Console will be print '27'
+ </script>
+<script>
+      //Example 35 with explain = if you use setTimeout method setTimeout method excute last first excute all code. 
+        // let a =2;
+        // setTimeout(()=>{
+        //     console.log(a)// Console will be print '100'
+        // },0)
+        // a = 100;
+</script>
+<script>
+      //Example 36 with explain = you can use small letter or Capital letter for declaring varaible
+       // let a =2;
+       // let A = 30;
+       // console.log(A) // Console will be print '30'
+</script>
+<script>
+      //Example 37 with explain = you can not use number for variable declaration. only use alphabet
+      // let A10 = 2;
+      // let 10A = "Like";
+      // console.log(A10);
+</script>
+<script>
+      //Example 38 with explain = because both are string values.
+      // let a = "like";
+      // let b = `like`;
+      // console.log(a == b) // Console will be print true
+</script>
+<script>
+      //Example 39 with explain = because c variable vaue minus 1 then return 10.
+      // let a = 10;
+      // let c = 11;
+      // console.log(--c === a) // console will be print 'true'
+</script>
+<script>
+      //Example 40 with explain = We are compare 1st time 3 values. but code excute is left to right.
+      // then that case we compare 1st two value a === b return true and data type is boolean and next c type number that way result is false
+      // let a =1;
+      // let b =1;
+      // let c =2;
+      // console.log(a === b === --c); // Console will be print 'false'
+</script>
+<script>
+      //Example 41 with explain = We can use * or ** start used. not an *** start
+      // console.log(3*3); //Console will be print '9'
+      // console.log(3**3); //Console will be print '27'
+      // console.log(3***3);  //Console will be print 'Unexpected token'
+</script>
+<script>
+      //Example 42 with explain = if you declar variable but value is not assign. then return undefined
+      // console.log(a) // undefined
+      // var a ;
+</script>
+<script>
+      //Example 43 with explain = you are not defined varaible
+      // console.log(b) // not undefined
+</script>
+<script>
+      //Example 44 with explain = it will return nested array
+      // console.log([[[[[[[]]]]]]]);  
+</script>
+<script>
+      //Example 45 with explain = for is reserv key in js
+      //let for = 100 // console will be print unexpected token
+</script>
+<script>
+      //Example 46 with explain = first console call number variable value was 0 then use increment operator value is 1
+      //second console call first increment oprator then number value is 2  
+      // let number = 0;
+      // console.log(number++); // Console will be print '0'
+      // console.log(++number); // Console will be print '2'
+      // console.log(number); // Console will be print '2'
+</script>
+<script>
+      //Example 47 with explain = if you used spread operator extract the array or object value.
+        // function getAge (...args){
+        //     console.log(typeof args) // Console will be print 'object'
+        // }
+        // getAge(33)
+</script>
+<script>
+      //Example 48 with explain = if you used 'use strict mode' this strict mode strictly code checking
+        // function getAge (){
+        //     'use strict'
+        //     age = 32
+        //     console.log(age) // Console will be print 'ReferenceError: age is not defined'
+        // }
+        // getAge()
+</script>
+<script>
+      //Example 49 with explain = The Eval function evaluates the string expression and returns its value.
+       // const sum = eval("10*10+10");
+       // console.log(sum) // Console will be print '110'
+</script>
+<script>
+      //Example 50 with explain = continue statement breaks one iteration, suppose value match this statement will be break
+       // for (let i = 1; i < 5;i++){
+       //  if(i === 3) continue;
+       //  console.log(i);// console will be print '124'
+       // }
+</script>
+<script>
+      //Example 51 with explain = call method immediatly executed that function and bind method create new function & this function new separate call
+       // let person = {name: "Samadhan"};
+
+       // function sayHi(age){
+       //  return `${this.name} ${age}`
+       // }
+       // console.log(sayHi.call(person,22)); // Samadhan 22
+       // console.log(sayHi.bind(person,33)) // return function bind create new funtion and this function need to separte call like that- '()'
+</script>
+<script>
+      //Example 52 with explain = 0 data type is number
+       // function sayHello (){
+       //  return (()=> 0)();
+       // }
+       // console.log(typeof sayHello()) // console will be print 'number'
+</script>
+<script>
+      //Example 53 with explain = function data type is function
+       // function sayHello (){
+       //  return (()=> 0)
+       // }
+       // console.log(typeof sayHello()) // consoe will be print 'function'
+       // console.log(typeof sayHello()()) // consoe will be print 'number'
+</script>
+<script>
+      //Example 54 with explain = 
+       // Numbers//
+       // console.log(typeof typeof 1) // if you used typeof two time that time number convert to string 
+       // var x=null;
+       // console.log(typeof x); // console will be print 'object' bcoz null data type is object
+       // console.log(typeof 37 === "number") //  both strings are identical, the comparison evaluates to 'true'.
+       // console.log(typeof 3.14 === "number") //  both strings are identical, the comparison evaluates to 'true'.
+        // console.log(typeof Math.LN2 === "number") // The value of Math.LN2 is indeed a number.comparison evaluates to true.
+        // console.log(typeof Infinity === "number")// Infinity is a special numeric value that represents positive infinity, and its data type is considered a number. comparison evaluates to 'true'.
+        //console.log(typeof NaN == "number") //"Not-a-Number," and it's considered a numeric value with a special meaning to indicate that a value is not a valid number. comparison evaluates to 'true'.
+        //console.log(typeof Number("1") === "number") //  Number() function converts its argument into a number. In this case, "1" is a string containing the number 1, so it is converted to a numeric value, which is 1.comparison evaluates to 'true'. 
+        //console.log(Number("shoe") === "number")//"shoe" is not a valid numeric representation, the result of this conversion is NaN (Not-a-Number). comparison evaluates to 'false'.
+
+        //String//
+        // console.log(typeof "" === "string"); // comparison evaluates to 'true'
+        // console.log(typeof `template literal` === "string");// comparison evaluates to 'true'
+        // console.log(typeof "1" === "string"); // comparison evaluates to 'true'
+        // console.log(typeof 1 === "string"); // comparison evaluates to 'false'
+        //console.log(String(1) === "string"); // comparison evaluates to 'false'
+
+        //Boolean//
+        // console.log(typeof true === "boolean"); // comparison evaluates to 'true'
+        // console.log(typeof false === "boolean"); // comparison evaluates to 'true'
+        // console.log(typeof Boolean(1) === "boolean"); // Boolean(1) function convert it boolean value, this case '1' is truely value. comparison evaluates to 'true'
+        // console.log(typeof !!1 === "boolean"); // comparison evaluates to 'true'
+
+        //Symbols //
+        // console.log(typeof Symbol() === "symbol");//This expression evaluates to the string "symbol" because the result of Symbol() is a symbol, and the typeof operator correctly identifies it as such."symbol" === "symbol" - This is a comparison between two identical strings, so it evaluates to 'true'.
+        // console.log(typeof Symbol("foo") === "symbol") //This expression evaluates to the string "symbol" because the result of Symbol("foo") is a symbol, and the typeof operator correctly identifies it as such."symbol" === "symbol" - This is a comparison between two identical strings, so it evaluates to 'true'.
+        // console.log(typeof Symbol.iterator === "symbol")
+</script>
+<script>
+      //Example 58 with explain = js function can have only return a 1 statement
+      // function showdata = (){
+      //   return 10;
+      //   return 20;
+      // }
+      // cosnt result = showdata();
+      // console.log(result); // Console will print '10'
+</script>
+<script>
+      //Example 59 with explain = ES6 introduce generator function return multiple statement.
+      // function* showdata = (){
+      //   yield 10;
+      //   yield 20;
+      // }
+      // cosnt result = showdata();
+      // console.log(result.next().value); // Console will print '10'
+      // console.log(result.next().value); // Console will print '20'
+</script>
+<script>
+      //Example 60 with explain = we use object.entries method this value separe in array
+    // const person = {
+    //     name: "Sam",
+    //     age: 33
+    // }
+
+    // const result = Object.entries(person);
+    // console.log(result);
+    // //Output should be 
+    // // ["name" "Sam"]
+    // // ["age" "33"]
+      
+</script>
+</body>
+</html>

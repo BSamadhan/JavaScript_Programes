@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title></title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+ 
+</head>
+
+<body>
+    
+
+  
+   <script>
+    // object declaration ways
+	// 1st Way Create object Literal
+//	   let employee = {
+//		name: "Samadhan",
+//		designation: "UI Developer",
+//		empid: 20378080,
+//	   }
+//       employee.address = "Pune";
+//       let res = Object.values(employee)
+//       res.forEach((el)=> console.log(el))
+//	   console.log(employee.name)
+//	   console.log(employee.designation)
+//	   console.log(employee.empid)
+       
+	   
+	// 2nd Way Create using new keyword
+//		function vehicle(name,maker,engine){
+//			this.name = name,
+//			this.maker = maker,
+//			this.engine = engine
+//		}
+//		
+//	   let car = new vehicle("GT","BMW","1990cc")
+//	   console.log(car.name)
+//	   console.log(car.maker)
+//	   console.log(car.engine)
+       
+       
+    // 3rd Way to create and using Object.create methos
+       let studs = {
+           isStuding: false,
+           studIntro: function(){
+               console.log(`My name is ${this.name}. Am I studying? ${this.isStuding}`)
+           }
+       }
+       
+       let me = Object.create(studs);
+       me.name = "Samadhan";
+       me.isStuding = true;
+       me.studIntro();
+       
+    
+    </script>
+    
+</body>
+
+</html>

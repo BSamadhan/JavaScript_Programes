@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Generator Function</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+ 
+</head>
+
+<body>
+    
+  <div>
+    <span id="dynamicId">100</span>
+    <button onclick="getNewId()">New Dynamic ID</button>
+  </div>
+
+  
+   <script>
+    //Generator Function 1st example
+      function* getId(){
+        let i = 100;
+        while(true){
+          i++;
+          yield i;
+        }
+      }
+      let res = getId();
+      function getNewId(){
+        document.getElementById("dynamicId").innerText = res.next().value;
+        console.log(res.next().value)
+      }
+      
+
+
+      
+      
+    </script>
+    
+</body>
+
+</html>

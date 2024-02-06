@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Callback Function</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+ 
+</head>
+
+<body>
+    
+
+    <ul id="getStd"></ul>
+   <script>
+
+    // Callbackfunction program example
+    
+    const students = [
+      {name:"Nimesh", subject: "English"},
+      {name:"Rahul", subject: "Math"}
+    ]
+
+    function enrollstudents(student,Callback){
+      setTimeout(()=>{
+        students.push(student);
+        console.log('add student info is successfully');
+        Callback();
+      },1000)
+    }
+
+    function getstudents(){
+      setTimeout(()=>{
+        let str = "";
+        students.forEach((student)=>{
+          str += `<li>${student.name}</li>`;
+        })
+        document.getElementById("getStd").innerHTML = str;
+        console.log("Students have been fetched")
+      },3000)
+    }
+    getstudents();
+    
+    let newStudent = {name:"Sam", subject: "Hindi"};
+    enrollstudents(newStudent, getstudents);
+    </script>
+    
+</body>
+
+</html>

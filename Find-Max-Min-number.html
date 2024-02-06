@@ -1,0 +1,57 @@
+<DOCTYPE html>
+<html>
+<body>
+
+<h2>Find Maximum number and last Maximum number</h2>
+<script>
+    //Find Maximum number and last Maximum number
+    // Solution 1
+    // let array = [1,2,5,5,10,56];
+    // let val = array.sort((a,b)=> b-a)[1];
+    // console.log(val);
+
+    // Solution 2
+      function nextBiggest(arr){
+            let max = - 1;
+            let semax = - 1;
+            for(let num of arr){
+                if(num > max){
+                    [semax,max] = [max,num]
+                } if(num > max && num < semax){
+                    semax = num
+                }
+            }
+            return semax
+        }
+        let array = [10,22,55,4,68,100,120];
+        console.log(nextBiggest(array));
+
+    // Solution 3 find max and min number 
+    // const array = [10,22,55,4,68,100,120];
+    // const findmaxnumber = (arr) =>{
+    //    return arr.reduce((pre,curr)=>{
+    //         return pre > curr? pre : curr
+    //    })
+    // }
+    // console.log(findmaxnumber(array))
+
+    //Find Minimum number and last Minimum number
+
+    // var numbers = [10, 20, 30, 40, 50, 60];
+    // var firstMin = Infinity;
+    // var secondMin = Infinity;
+
+    // for (var i = 0; i < numbers.length; i++) {
+    //   if (numbers[i] < firstMin) {
+    //     secondMin = firstMin;
+    //     firstMin = numbers[i];
+    //   } else if (numbers[i] < secondMin && numbers[i] !== firstMin) {
+    //     secondMin = numbers[i];
+    //   }
+    // }
+
+    // console.log("Second minimum number is: " + secondMin);
+</script>
+
+</body>
+</html>

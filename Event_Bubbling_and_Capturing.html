@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Bubbling Example</title>
+  <style>
+    div {
+      width: 100px;
+      height: 100px;
+      margin: 10px;
+      padding: 10px;
+      border: 1px solid black;
+    }
+  </style>
+</head>
+<body>
+
+<!--   <div id="outer">
+    <div id="middle">
+      <div id="inner">Click me!</div>
+    </div>
+  </div> -->
+
+
+    <div id="parent">
+      <div id="child">Click me!</div>
+    </div>
+  <script>
+    // Get the outer, middle, and inner elements
+    var outer = document.getElementById('outer');
+    var middle = document.getElementById('middle');
+    var inner = document.getElementById('inner');
+
+    // Attach a click event listener to the innermost element
+    inner.addEventListener('click', function (event) {
+      alert('Innermost element clicked!');
+      // Stop the event from further propagation (bubbling)
+      event.stopPropagation();
+    });
+
+    // Attach a click event listener to the middle element
+    middle.addEventListener('click', function () {
+      alert('Middle element clicked!');
+    });
+
+    // Attach a click event listener to the outermost element
+    outer.addEventListener('click', function () {
+      alert('Outermost element clicked!');
+    });
+
+
+
+    // Event capturing phase
+  document.getElementById('parent').addEventListener('click', function() {
+    console.log('Parent capturing phase');
+  }, true);
+
+  document.getElementById('child').addEventListener('click', function() {
+    console.log('Child capturing phase');
+  }, true);
+  </script>
+
+</body>
+</html>

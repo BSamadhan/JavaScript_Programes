@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title></title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+ 
+</head>
+
+<body>
+    
+
+  
+   <script>
+    // How to remove doublicate array
+    // Solution 1 using for loop for remove doublicate array
+       let array = [1,2,3,3,4,4,5];
+       function uniqueArray(arr){
+           let uniqueElement = [];
+           for(let i =0; i < arr.length;i++){
+               if(!uniqueElement.includes(arr[i])){
+                   uniqueElement.push(arr[i])
+               }
+           }
+           return uniqueElement;
+       }
+       console.log(uniqueArray(array));
+       console.log(array);
+       
+    // Solution 2 using for loop "of" and remove doublicate array   
+//       let array = [1,2,3,3,4,4,5];
+//       function uniqueArray(arr){
+//           let result = [];
+//           for(let item of arr){
+//               if(!result.includes(item)){
+//                   result.push(item)
+//               }
+//           }
+//           return result;
+//       }
+//       console.log(uniqueArray(array));
+//       console.log(array)
+       
+
+
+    // Solution 3 using Set method for remove doublicate array
+//       let array = [1,2,3,3,4,4,5];
+//       function uniqueArray(){
+//           return [new Set(array)]
+//       }
+//       console.log(uniqueArray(array));
+//       console.log(array);
+       
+    
+    // Solution 4 using Set method for remove doublicate array
+//       let array = [1,2,3,3,4,4,5];
+//       function uniqueArray(arr){
+//           const result = arr.filter((item,index)=> arr.indexOf(item) ===index);
+//           return result
+//       }
+//       console.log(uniqueArray(array));
+//       console.log(array);
+       
+       
+    // Solution 5 using reduce and includes for remove doublicate array
+//       let array = [1,2,3,3,4,4,5];
+//       function uniqueArray(arr){
+//         return arr.reduce((currVal,preVal)=>{
+//               return currVal.includes(preVal) ? currVal : [...currVal,preVal]
+//           },[])
+//        }
+//       console.log(uniqueArray(array));
+//       console.log(array);
+    </script>
+    
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Palindrom</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+ 
+</head>
+
+<body>
+    
+
+  
+   <script>
+    // Palindrom string program 1st example
+    function isPal(str){
+      let reverse = str.split('').reverse().join('');
+      if(str.toLowerCase() === reverse.toLowerCase()){
+        console.log('it is a palindrom')
+      }else{
+        console.log('it is a not palindrom')
+      }
+    }
+    let newStr = prompt('Enter string');
+    isPal(newStr)
+
+
+    // Palindrom string program 2nd example
+    // function checkPalindrom(strign){
+    //   let len = strign.length;
+    //   for(let i = 0; i < len/2; i++){
+    //     if(strign[i] !== strign[len - 1 - i]){
+    //       return 'It is a not palindrom'
+    //     }
+    //   }
+    //   return 'It is palindrom'
+    // }
+    // let strign = prompt('Enter the string')
+    // document.write(checkPalindrom(strign));
+
+
+    //Palindrom string program 3rd example
+    // function checkPalindrom(string){
+    //   let newStr = string.toLowerCase();
+    //   let left = 0;
+    //   let right = newStr.length - 1;
+    //   while(left < right){
+    //     if(newStr[left] !== newStr[right]){
+    //       return 'It is a not palindrom';
+    //     }
+    //     left ++;
+    //     right--;
+    //   }
+    //   return 'It is a palindrom'
+    // }
+    // console.log(checkPalindrom('level'))
+
+
+
+    //Palindrom Number program 4th example
+
+     function checkPalindrom(string){
+       let arrayvalue = string.split('');
+       let reverseValue = arrayvalue.reverse();
+       let reverString = reverseValue.join('');
+       if(string == reverString){
+         console.log('it is a palindrom');
+       }else{
+         console.log('it is a not palindrom');
+       }
+     }
+     let string = prompt("Enter the string");
+     checkPalindrom(string);
+
+
+
+
+    </script>
+    
+</body>
+
+</html>

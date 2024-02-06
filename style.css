@@ -1,0 +1,44 @@
+h2{
+	color: red;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    /* flex-direction: column; */
+    /* flex-direction: row-reverse; */
+    /* flex-direction: column-reverse; */
+    width: 300px;
+    border: 3px solid #000;
+    padding: 5px;
+    flex-wrap: wrap;
+    flex-flow: row wrap; // flex-flow property set multiple values 
+/*    justify-content: flex-start; // items position start point*/
+/*    justify-content: flex-end; // items position start end point*/
+/*    justify-content: space-between; // means set space in two items */
+/*    justify-content: space-around; // items set space in item around means set spacing left to right equaly*/
+/*      justify-content: space-evenly; // set space in all items equaly*/
+}
+.column{
+	color: #fff;
+	padding: 5px;
+    margin: 5px;
+}
+.column1 {
+    background: #a80404;
+}
+.column2 {
+    background: #1c8ea3;
+}
+.column3 {
+    background: #07a804;
+}
+.column4 {
+    background: #ac781a;
+}
+.column5 {
+    background: #a81865;
+}
+.column6 {
+    background: #140ec7;
+}

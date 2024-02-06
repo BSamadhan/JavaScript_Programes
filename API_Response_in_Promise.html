@@ -1,0 +1,31 @@
+<DOCTYPE html>
+<html>
+<body>
+
+<h2>Handle API Response in Promise</h2>
+<script>
+    function fetchDataFromAPI(){
+        return new Promise((resolve,reject)=>{
+            fetch('https://jsonplaceholder.typicode.com/users')
+            .then((response)=>{
+                if(!response.ok){
+                    reject('request failed')
+                }
+                return response.json();
+            })
+            .then((data)=>{
+                resolve(data)
+            })
+        })
+    }
+    fetchDataFromAPI()
+    .then(data=>{
+        console.log('Data fetched successfully',data)
+    }).catch(error=>{
+        console.log('Error', error)
+    })
+
+</script>
+
+</body>
+</html>

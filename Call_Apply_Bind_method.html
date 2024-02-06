@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Call Apply Bind</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+ 
+</head>
+
+<body>
+    
+
+   <h2>Call Apply Bind Methods</h2>
+   <script>
+       
+       // Call Apply Bind methods examples 
+
+           const person = {
+                firstname:"Samadhan",
+                lastname: "Behere",
+                fullname: function(){
+                   //return `${this.firstname} ${this.lastname}`
+                    console.log(`${this.firstname} ${this.lastname}`)
+                }
+            }
+            const otherobj = {
+                firstname: "Deep",
+                lastname: "Desale"
+            }
+            function getnewValue(value){
+                console.log(value + " " + this.fullname())
+            }
+            // Using the call method
+            //getnewValue.call(person,"Hi");
+            person.fullname.call(otherobj)
+
+            // Using the apply method
+            //const arg = ["Hello"];
+            getnewValue.apply(person,["Hello"]);
+
+            // Using the bind method
+            const result = getnewValue.bind(person);
+            result('Welcome');
+
+            
+           
+
+
+           
+
+   </script>
+    
+</body>
+
+</html>

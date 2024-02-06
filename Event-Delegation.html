@@ -1,0 +1,26 @@
+<DOCTYPE html>
+<html>
+<body>
+
+<h2>Event Delegation</h2>
+    <div id="product">
+        <li id="Shoes">Shoes</li>
+        <li id="Shirts">Shirts</li>
+        <li id="Wallets">Wallets</li>
+    </div>
+    
+<script>
+   //Event delegation is basically js pattern handle events. Insted of adding of event listener to each of every similer element. 
+   // We can add to event listener to parent element and call the event particular target using .target property.
+	document.getElementById("product").addEventListener('click',(event)=>{
+		if(event.target.tagName === "li"){
+			window.location.href += "#" + event.target.id
+		}
+	});	
+    
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title></title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+ 
+</head>
+
+<body>
+    
+
+  
+   <script>
+    // Reverse string program 1st example
+    // const str = "This is Javascript Code";
+
+    // const arrofstring = str.split('').reverse().join('').split(' ').reverse().join(' ');
+    // console.log(arrofstring);
+
+
+
+
+    // Reverse string program 2nd example
+    // const str = "This is Javascript Code";
+
+    // const arrofStr = str.split(' ')
+    // const reverseStr = arrofStr.map(item=> item.split('').reverse().join(''))
+   
+    // console.log(reverseStr.join(' '))
+
+
+
+    // Reverse string program 3rd example
+    // function wordReverse(str){
+    //   return str.split(' ').map(function(words){
+    //     return words.split('').reverse().join('')
+    //   }).join(' ')
+    // }
+    // console.log(wordReverse("samadhan ashok behere"));
+
+    // Reverse string program 4th example
+    function reverseStr(str){
+      var word = [];
+      word = str.split(' ');
+      var r = ""
+      for(var i = 0; i < word.length;i++){
+        r += word[i].split('').reverse().join('')+ " "
+      }
+      return r
+    }
+
+    console.log(reverseStr('samadhan ashok behere'))
+    </script>
+    
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Curring Function</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+ 
+</head>
+
+<body>
+    
+
+  
+   <script>
+
+    // Curring function program 1st example
+ 
+    // function calculateVolume(a){
+    //   return function(b){
+    //     return function(c){
+    //       return a+b+c;
+    //     }        
+    //   }
+    // }
+    // let result = calculateVolume(2)(3)(5)
+    // console.log(result)
+
+    // Curring function program 2nd example real time
+//       function add(a){
+//           return function(b){
+//               if(b) return add(a + b);
+//               return a;
+//           }
+//       }
+//       console.log(add(5)(5)(3)(8)())
+    // Curring function program 3rd example real time
+
+     userObj = {
+       name: "Samadhan Behere",
+       age: 33,
+       address: "Pune"
+     }
+     
+     function getinfo(obj){
+       return function(objinfor){
+         return obj[objinfor]
+       }
+     }
+
+    let res= getinfo(userObj);
+    console.log(res("name"))
+
+//      const list = [
+//      {
+//        id: 1,
+//        name: 'Steve',
+//        email: 'steve@example.com',
+//      },
+//      {
+//        id: 2,
+//        name: 'John',
+//        email: 'john@example.com',
+//      },
+//      {
+//        id: 3,
+//        name: 'Pamela',
+//        email: 'pam@example.com',
+//      },
+//      {
+//        id: 4,
+//        name: 'Liz',
+//        email: 'liz@example.com',
+//      },
+//    ];
+//      const filtering = (name) => (item)=> item.name !==name;
+//      const filteringbyname = (list,name)=>{
+//        return list.filter(filtering(name))
+//      }
+//      const result = filteringbyname.list.map(el=> el.name.toLowerCase())
+//      console.log(result)
+//      console.log(filteringbyname(list, 'john'))
+      
+      
+    </script>
+    
+</body>
+
+</html>

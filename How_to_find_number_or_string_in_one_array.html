@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>How to find number or string in one array</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+ 
+</head>
+
+<body>
+    
+
+  
+   <script>
+    // How to find number or string in one array
+    var arr = ["Samadhan", 41,85,"Deepak","Harish",7,"Mahesh"];
+    var sum = 0;
+    arr.forEach((el)=>{
+      // if(typeof el === "string"){
+      //   console.log(el) // return string
+      // }
+      if(typeof el ==='number'){
+        sum = sum + el // 133
+      }
+    })
+    console.log(sum)
+
+    </script>
+    
+</body>
+
+</html>

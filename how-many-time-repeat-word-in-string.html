@@ -1,0 +1,90 @@
+   <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Count of how many time return letter in word</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+ 
+</head>
+
+<body>
+    
+
+  
+   <script>
+    // How many time repeat charater in your string 
+
+    const dummyString = "Australia are world champions";
+    const charCount = {};
+
+    dummyString.split('').forEach((el)=>{
+      if(charCount.hasOwnProperty(el)===false){
+        charCount[el] = 1;
+      }else{
+        charCount[el]++
+      }
+    })
+
+    console.log(charCount)
+
+    var str = "samadhan";
+    var count = 0;
+    // Using for loop
+    for(var i=0;i<str.length;i++){
+        if(str[i]==='a'){
+            count++
+        }
+    }
+    console.log(count)
+
+    // How many time repeat charater in your string
+    var str1 = "samadhan";
+    // Using Array from and reduce function for Ocurret count
+    var result = Array.from(str1).reduce((count,value)=>{
+        return value === 'e' ? count + 1 : count
+    },0);
+    console.log(result)
+
+
+    // How many time repeat charater and number in your array
+    var array = [3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3];
+
+    // Using the reduce function to count occurrences of '3'
+    var countOfThree = array.reduce(function (count, value) {
+      return count + (value === 'a' ? 1 : 0);
+    }, 0);
+
+    // Logging the result
+    console.log("Number of occurrences of 'a':", countOfThree);
+
+
+    // How many time repeat charater and number in your array
+    var arr1=[3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3];
+    var count = 0;
+    // Using the for loop to count occurrences of 'a'
+    for(var i=0; i<arr1.length;i++){
+        if(arr1[i] === 'a'){
+            count++
+        }
+    }
+    console.log("a print " + count + " time");
+
+
+    // Find words in string 
+      var str = "This is a sample string";
+      var words = str.split(' ').filter(function(word) {
+          return word.length > 0;
+      });
+      var wordCount = words.length;
+
+      console.log("Word count: " + wordCount);
+    </script>
+    
+</body>
+
+</html>
